@@ -111,6 +111,10 @@ Next, just follow the plan in the text file. *Warning: many jsons to load throug
 
 ==== Second half of the night ====
 
+*** FIRST: IT IS MANDATORY TO UPDATE THE PROPID IN THE "Exposure Control" WINDOW ***
+*** Use prop-id: 2023B-662232
+*** In case of trouble, use last semester propid: 2023A-423737
+
 Contact: Edward Lin (hsingwel@umich.edu)
 
 Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
@@ -120,7 +124,7 @@ There is a single script that should last the full half-night. It is a single bl
 
 Alternatively, script in observer2 and in the Google Drive:
 
-   ~/ExposureScripts/User_scripts/2023A-423737/NTH3.json
+   ~/ExposureScripts/User_scripts/2023A-423737/JT1_0818_corrected.json
 
 Script will have exposures for the full half-night. However, delete observations or load the script again if you are behind/ahead of time.
 
@@ -136,11 +140,11 @@ No need for standard star fields.
 
 Observer support/telescope operator should be able to handle this program.
 
-Send qcInv file to the PI.
+Finally, send the qcInv file to the PI:
 
-    From the database window ("pgtcl>" prompt), type:
+    - From the database window ("pgtcl>" prompt), type:
        pgtcl> qcInvPrint
 
-    That will create a .qcInv text file with the night date. Copy it over SSH to the lasrem0 (remote observing room machine) and then email it.
+    - That will create a .qcInv text file with the night date. Copy it over SSH (scp) to the lasrem0 (remote observing room machine) and then email it to Edward.
 
     

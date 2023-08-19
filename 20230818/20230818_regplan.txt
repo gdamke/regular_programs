@@ -42,17 +42,18 @@ DECAT: Start right after pointing is done.
 Contact: the queue is usually organized by Armin Rest (arest@stsci.edu).
 The group usually communicates through slack but not all the CTIO staff is there.
 
-Scripts and observing plan is located in github (https://github.com/gnarayan/decat_pointings) but updated locally in the observing computer.
+Scripts and observing plan is located IN A SEPARATE DECAT GITHUB REPOSITORY (https://github.com/gnarayan/decat_pointings) but updated locally in the observing computer.
 
 You have to update the plan after confirmation that it has been updated (they tend to do it very close to the start of the night or even the night midpoint, if observing on the second half).
 
-+++ UPDATING THE NIGHT PLAN +++
++++ UPDATING THE NIGHT PLAN FROM THE DECAT REPOSITORY +++
+(*** Note that the DECAT repo is different than the "regular_programs" repository ***)
 
-- If you are a git user (or if you want to follow the few steps below): This repository is cloned from git in the local machine at the observing room. You need to pull the latest changes from the repository, doing the following:
+- If you are a git user (or if you want to follow the few steps below): The DECAT repository is cloned from git in the local machine at the observing room. You need to pull the latest changes from the repository, doing the following:
 
    1. Open a Terminal, then go to the home directory and type the command:
 
-      [DECamObserver]$ cd DECAT_program/decat_pointings
+      [DECamObserver]$ cd ~/DECAT_program/decat_pointings
 
 
    2. Check if you are in the repository directory with git status:
@@ -103,3 +104,43 @@ Next, just follow the plan in the text file. *Warning: many jsons to load throug
    For example, to find the script for "C3" object, just run the command below and check the output:
    
       [DECamObserver]$ find . -iname “*C3*”
+
+-----------------------------------------------
+   Midpoint   00:46 -04  04:46 UT
+-----------------------------------------------
+
+==== Second half of the night ====
+
+Contact: Edward Lin (hsingwel@umich.edu)
+
+Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
+There is a single script that should last the full half-night. It is a single block with count=140.
+
+** Script from this git repository within 2023B-662232/ directory **
+
+Alternatively, script in observer2 and in the Google Drive:
+
+   ~/ExposureScripts/User_scripts/2023A-423737/NTH3.json
+
+Script will have exposures for the full half-night. However, delete observations or load the script again if you are behind/ahead of time.
+
+IMPORTANT NOTE:
+
+   If observing on first half of the night:
+      Field starts at very high airmass (if first half of the night). Start this program when the Sun is at ~ -12.5. There will be no vignetting by the lower shutter (but just).
+
+   If observing on second half of the night:
+      Keep monitoring the end of the night when the field is setting with the PF webcam and stop before vignetting, if needed. Also, check the total background counts of last image and stop if background > ~18k counts. To check the counts, go to Kentools terminal (the one with "prompt>") and type "load". Check the counts in DS9.
+
+No need for standard star fields.
+
+Observer support/telescope operator should be able to handle this program.
+
+Send qcInv file to the PI.
+
+    From the database window ("pgtcl>" prompt), type:
+       pgtcl> qcInvPrint
+
+    That will create a .qcInv text file with the night date. Copy it over SSH to the lasrem0 (remote observing room machine) and then email it.
+
+    

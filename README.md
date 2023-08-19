@@ -11,7 +11,7 @@
 1. Open a Terminal and go to the repository directory located in ~/regular_programs
    ```cd ~/regular_programs```
 
-   Your branch is up to date with 'origin/main'.(**Note: If the repository is not in the machine or if you made a mistake and need to download it again**, delete the ```~/regular_programs``` directory, and then:
+   (**Note: ONLY If the repository is not in the machine or if you made a mistake and need to download it again**, delete the ```~/regular_programs``` directory, and then:
    ```
    cd ~
    git clone https://github.com/gdamke/regular_programs.git
@@ -44,3 +44,10 @@
    git pull
    ```
    The output should say ```Your branch is up to date with 'origin/main'.```
+
+**Alternatively, if the steps above seem complicated, you can download the whole repository in ZIP format from Github by clicking on gree *Code* button and then *Download ZIP*. Then, extract the file somewhere.**
+
+
+----
+
+# Instructions for editing the repository (TBD)

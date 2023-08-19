@@ -31,15 +31,15 @@
    git fetch
    ```
 
-5. Now you can check if there are changes in the Github repository that need to be sync-ed. Do it with:
+4. Now you can check if there are changes in the Github repository that need to be sync-ed. Do it with:
    ```
    git status
    ``` 
 
-   If the output says that you are behind by N commits, then do the step 5.
+   If the output says ```Your branch is behind 'origin/main' by N commits``` then do the step 5.
 
 
-7. Finally *pull* the changes from Guthub to update your local copy with:
+5. Finally *pull* the changes from Guthub to update your local copy with:
    ```
    git pull
    ```

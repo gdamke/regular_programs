@@ -69,5 +69,19 @@ Don’t forget the night report!
 
 ==== Second half of the night ====
 
-   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
-    
+* These notes are in "alpha" state and need to be improved!
+
+The program contains "regular" observing scripts, and also a backup program (depending on image quality, read below).
+
+The regular program is very easy to find in the 2020B-0288/ directory. Json files are named as <DATEUT>_<UT_TIME>. Load them according to the date and UT time, starting at Sun altitude -14.
+
+* Start the obsbot!
+- Open a new terminal and type "bash"
+- cd ~/obsbot/
+- Execute obsbot.py (or something like that)
+
+this will start reading the images in the directory and open an image showing a plot with parameters of the last image.
+
+* Connect to the usual Zoom link (in notes) and share your screen with the observers. They will tell you if you will observe the regular program, or load any of the backup_scripts.
+
+ 

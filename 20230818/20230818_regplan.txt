@@ -1,0 +1,105 @@
+###########################################
+#### DECam Observing Plan for 20230818 ####
+###########################################
+
+Night Ephemeris
+
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:27 -04  22:27 UT   15:32  233 deg  
+Eve. -10   19:02 -04  23:02 UT   16:07  242 deg  Zeropoint; standards
+Eve. -14   19:21 -04  23:21 UT   16:26  246 deg  Begin obstac
+Eve. -18   19:40 -04  23:40 UT   16:45  251 deg  Last chance standards
+Moonset    20:26 -04  00:26 UT   17:31  263 deg  
+Midpoint   00:46 -04  04:46 UT   21:52  328 deg  
+Morn -18   05:53 -04  09:53 UT   02:58   44 deg  Begin astronomical twilight
+Morn -14   06:11 -04  10:11 UT   03:16   49 deg  End obstac; begin standards
+Morn -10   06:31 -04  10:31 UT   03:36   54 deg  
+Sunrise    07:06 -04  11:06 UT   04:11   63 deg  
+Moon position (deg): RA 177.4, Dec 4.1 Phase: 0.149
+
+-----------------------------------------------
+
++++ First half program: DECAT
+
+2023A-237157 (PI: Narayan, Rest)
+
+Science Support: G. Damke
+Observers: Karleyne Silva
+
++++ Second half program: Lin
+
+2023B-662232 (PI: Lin)
+
+Science Support: G. Damke
+Observers: Karleyne Silva
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+DECAT: Start right after pointing is done.
+
+Contact: the queue is usually organized by Armin Rest (arest@stsci.edu).
+The group usually communicates through slack but not all the CTIO staff is there.
+
+Scripts and observing plan is located in github (https://github.com/gnarayan/decat_pointings) but updated locally in the observing computer.
+
+You have to update the plan after confirmation that it has been updated (they tend to do it very close to the start of the night or even the night midpoint, if observing on the second half).
+
++++ UPDATING THE NIGHT PLAN +++
+
+- If you are a git user (or if you want to follow the few steps below): This repository is cloned from git in the local machine at the observing room. You need to pull the latest changes from the repository, doing the following:
+
+   1. Open a Terminal, then go to the home directory and type the command:
+
+      [DECamObserver]$ cd DECAT_program/decat_pointings
+
+
+   2. Check if you are in the repository directory with git status:
+   
+      [DECamObserver]$ git status
+
+
+      The output should show “#On branch main” in the first line.
+
+   3. Next, check for changes in the repository:
+   
+      [DECamObserver]$ git fetch
+
+      this will compare changes between the remote repository and your local copy.
+
+   4. Finally, update any pending changes by doing:
+   
+      [DECamObserver]$ git pull
+	
+    (Only if you made a mistake with git):
+        you can delete the whole repository and clone it again:
+	
+	[DECamObserver]$ cd ~/DECAT_program
+	[DECamObserver]$ rm -rf decat_pointings
+	[DECamObserver]$ git clone https://github.com/gnarayan/decat_pointings.git
+
+- If you are not git user, you can download the full directory (in the main directory: Code → Download ZIP).
+  There are many things there. You will be interested in:
+  
+  Observing plan: in 2023B/202308XX/202308XX_obsplan.txt   (replace XX by today’s date)
+  Scripts: in jsons/
+  There is a folder for each program in the DECAT alliance.
+
++++ DOING THE OBSERVATIONS +++
+
+   The repository will have an observing plan with the UT date of the beginning of the night. Go to the directory that will look like the one below (CHANGE THE DATE!)
+   
+   [DECamObserver]$ cd 2023B/20230818
+	
+Next, just follow the plan in the text file. *Warning: many jsons to load through the night!!!*
+
+*** If you are getting behind the program ***
+
+   Check the instruction at the beginning of the DECAT night plan, it will tell you how to identify the objects that you can skip to get back on track.
+
+*** If you’re having trouble finding a script ***
+   Go to the jsons/ directory and use the "find" command in the Terminal.
+   For example, to find the script for "C3" object, just run the command below and check the output:
+   
+      [DECamObserver]$ find . -iname “*C3*”

@@ -39,7 +39,8 @@ Observers: Karleyne Silva
 
 DECAT: Start right after pointing is done.
 
-Contact: the queue is usually organized by Armin Rest (arest@stsci.edu).
+Contact: the queue is usually organized by Armin Rest (check email address in internal Doc).
+
 The group usually communicates through slack but not all the CTIO staff is there.
 
 Scripts and observing plan is located IN A SEPARATE DECAT GITHUB REPOSITORY (https://github.com/gnarayan/decat_pointings) but updated locally in the observing computer.
@@ -115,7 +116,7 @@ Next, just follow the plan in the text file. *Warning: many jsons to load throug
 *** Use prop-id: 2023B-662232
 *** In case of trouble, use last semester propid: 2023A-423737
 
-Contact: Edward Lin (hsingwel@umich.edu)
+Contact: Edward Lin (check email address in internal Doc).
 
 Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
 There is a single script that should last the full half-night. It is a single block with count=140.
@@ -146,5 +147,4 @@ Finally, send the qcInv file to the PI:
        pgtcl> qcInvPrint
 
     - That will create a .qcInv text file with the night date. Copy it over SSH (scp) to the lasrem0 (remote observing room machine) and then email it to Edward.
-
     

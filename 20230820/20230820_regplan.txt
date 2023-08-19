@@ -1,0 +1,49 @@
+###########################################
+#### DECam Observing Plan for 20230820 ####
+###########################################
+
+Night ephemeris
+
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:28 -04  22:28 UT   15:41  235 deg  
+Eve. -10   19:03 -04  23:03 UT   16:16  244 deg  Zeropoint; standards
+Eve. -14   19:22 -04  23:22 UT   16:35  249 deg  Begin obstac
+Eve. -18   19:41 -04  23:41 UT   16:54  253 deg  Last chance standards
+Moonset    22:13 -04  02:13 UT   19:26  292 deg  
+Midpoint   00:46 -04  04:46 UT   21:59  330 deg  
+Morn -18   05:51 -04  09:51 UT   03:04   46 deg  Begin astronomical twilight
+Morn -14   06:09 -04  10:09 UT   03:22   50 deg  End obstac; begin standards
+Morn -10   06:29 -04  10:29 UT   03:42   56 deg  
+Sunrise    07:04 -04  11:04 UT   04:17   64 deg  
+Moon position (deg): RA 198.5, Dec -7.0 Phase: 0.258
+
+-----------------------------------------------
+
++++ First half program: Chiti (MAGIC)
+
+2023B-646244 (PI: Chiti)
+
+Science Support: G. Damke
+Observers: Guillermo Damke, Roque Ruiz (training)
+
++++ Second half program: Leauthaud (Merian)
+
+2020B-0288 (PI: Leauthaud)
+
+Science Support: G. Damke
+Observers: Guillermo Damke, Roque Ruiz (training)
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
+
+-----------------------------------------------
+   Midpoint   00:46 -04  04:46 UT
+-----------------------------------------------
+
+==== Second half of the night ====
+
+   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
+    

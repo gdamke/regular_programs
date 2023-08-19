@@ -37,7 +37,31 @@ Observers: Karleyne Silva
 
 ==== First half of the night ====
 
-   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
+The *important* thing to remember with this program is that the exposure time of the guider needs to be setup to 2400ms
+
+kentools qcInv will not give teff for exposures taken with the N395 filter, but running seeingall should give a value for the PSF FWHM.
+
+Sometimes seeingall gets the ellipticity very wrong, opening an image and running seeing will give a more accurate number. We ask that observers run seeingall (and seeing if necessary) after each N395 image and record the value in the “Data Quality” section below.
+
+We ask that observers take a 30s exposure with the g-band filter at the end of every .json script (every ~1 hour) and log the qcInv teff from that exposure. 
+
+This will allow us to coarsely monitor image quality throughout the night.
+
+At the end of the night please post the output of qcInv (or inv) in this log so we can map between exposure number and MAGIC field number
+
+23:21 UT: Start MAGIC (2023B-646244 directory)
+ - 20230819_23:24:06.json
+ - 20230820_00:28:06.json
+ - 20230820_01:31:06.json
+ - 20230820_02:34:06.json
+ - 20230820_03:37:36.json
+ - 20230820_04:41:06.json
+04:05 UT: (if conditions are good; seeing < ~1.2”; teff > 0.3): Tuc 5 (3 x 720s)
+ - tuc5_N395.json
+
+04:47 UT: End of half night
+
+Don’t forget the night report!
 
 -----------------------------------------------
    Midpoint   00:46 -04  04:46 UT

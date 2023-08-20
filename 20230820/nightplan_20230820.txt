@@ -1,0 +1,114 @@
+###########################################
+#### DECam Observing Plan for 20230820 ####
+###########################################
+
+Night ephemeris
+
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:28 -04  22:28 UT   15:41  235 deg  
+Eve. -10   19:03 -04  23:03 UT   16:16  244 deg  Zeropoint; standards
+Eve. -14   19:22 -04  23:22 UT   16:35  249 deg  Begin obstac
+Eve. -18   19:41 -04  23:41 UT   16:54  253 deg  Last chance standards
+Moonset    22:13 -04  02:13 UT   19:26  292 deg  
+Midpoint   00:46 -04  04:46 UT   21:59  330 deg  
+Morn -18   05:51 -04  09:51 UT   03:04   46 deg  Begin astronomical twilight
+Morn -14   06:09 -04  10:09 UT   03:22   50 deg  End obstac; begin standards
+Morn -10   06:29 -04  10:29 UT   03:42   56 deg  
+Sunrise    07:04 -04  11:04 UT   04:17   64 deg  
+Moon position (deg): RA 198.5, Dec -7.0 Phase: 0.258
+
+-----------------------------------------------
+
++++ First half program: Chiti (MAGIC)
+
+2023B-646244 (PI: Chiti)
+
+Science Support: G. Damke
+Observers: Guillermo Damke, Roque Ruiz (training)
+
++++ Second half program: Leauthaud (Merian)
+
+2020B-0288 (PI: Leauthaud)
+
+Science Support: G. Damke
+Observers: Guillermo Damke, Roque Ruiz (training)
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
+
+-----------------------------------------------
+   Midpoint   00:46 -04  04:46 UT
+-----------------------------------------------
+
+==== Second half of the night ====
+
+ propid: 2020B-0288 (PI: Leauthaud)
+
+(* These notes are in an "alpha" state and may be modified!*)
+
+The program contains "regular program" observing scripts specific for the night, and also a "backup_program" that is observed depending on night conditions (read below). The observers will connect to the regular Zoom link to help you monitor the conditions of the night to decide whether do the regular or the backup program. You need to start the “obsbot” within the observer2 to get the conditions measured for the last image, and share your Zoom screen with the program observers, who will take note of the numbers.
+
+
+1. Load the .json file(s) for the program:
+
+   The regular program is in the 2020B-0288/ directory and very easy to follow. 
+
+   - The json files are named as <DATE_UT>_<UT_TIME>.
+   - There is (usually) one script per hour.
+   - ** Pick each script according to the date and UT time, going in order by date/time. **
+   - Start the program at Sun altitude -14 deg, if observing on 1st half of the night.
+   - GUIDER: if observing in a narrowband filter (name start with "N"), then increase exposure time to 1200 msec.
+   
+2. Start the obsbot!
+
+   The "obsbot" is a Python program that measures several parameters of the images during the night. To run it:
+   
+   a. In the observer2 VNC, open a new terminal.
+
+   v. Go to the obsbot directory:
+
+      [DECamObserver]$ cd ~/obsbot
+
+   c. Run "bash":
+   
+      [DECamObserver]$ bash
+
+   d. Start copilot:
+      [DECamObserver]$ source copilot.sh
+      
+   copilot may initially show data from previous night, but it will automatically update once data collection starts.
+   
+   You can minimize the terminal running copilot (but know where this terminal is because you will need it at the end of the night).
+
+   Note: If you do not see the plot updating, then check and make sure that the rawdata symlink under ~/obsbot is pointing to the Merian raw data directory:
+
+   e. Check that the link points to Merian rawdata:
+
+      [DECamObserver]$ ls -la
+      
+      => the rawdata symbolic link should point to the correct path: /home4/images/fits/2020B-0288/
+
+   f. ONLY IF the path is wrong, then you have to set the correct path doing the three steps below:
+
+      [DECamObserver]$ rm ~/obsbot/rawdata
+      
+      [DECamObserver]$ cd ~/obsbot
+
+      [DECamObserver]$ ln -s /home4/images/fits/2020B-0288/ rawdata
+      
+3. Connect to the usual Zoom link (in the notes) and share your screen with the observers. They will tell you if you will observe the regular program, or load any of the backup_scripts.
+
+4. Monitor the Guider exposure time:
+
+   - Increase guider exposure time for narrowband filters (900 to 1200 miliseconds is OK).
+   - If cloudy, you can go even for 2400 msec.
+   - The backup_program may contain broadband filters. In that case, reduce exposure time to ~300 msec.
+   - Reduding the guider exposure time is also important for crowded fields. You can ask the operator for advice/help.
+
+** SELECTING A BACKUP PROGRAM **
+
+There are multiple json files in the backup program. You need to first open the file called "output.log" and scrool down to the text table titled "BACKUP FIELD INFO". The table lists multiple fields and the respective airmass at the UTC times on the first row. Pick any field with load airmass for the UTC time. You can pick any considering +/- 30 minutes from the listed time in the table (as long as the airmass is OK). 
+    

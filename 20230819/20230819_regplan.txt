@@ -69,21 +69,67 @@ Don’t forget the night report!
 
 ==== Second half of the night ====
 
-* These notes are in "alpha" state and need to be improved!
+(* These notes are in an "alpha" state and may be modified!*)
 
-The program contains "regular" observing scripts, and also a backup program (depending on image quality, read below).
+The program contains "regular program" observing scripts specific for the night, and also a "backup_program" that is observed depending on night conditions (read below). The observers will connect to the regular Zoom link to help you monitor the conditions of the night to decide whether do the regular or the backup program. You need to start the “obsbot” within the observer2 to get the conditions measured for the last image, and share your Zoom screen with the program observers, who will take note of the numbers.
 
-The regular program is very easy to find in the 2020B-0288/ directory. Json files are named as <DATEUT>_<UT_TIME>. Load them according to the date and UT time, starting at Sun altitude -14.
 
-* Start the obsbot!
-- Open a new terminal and type "bash"
-- cd ~/obsbot/
-- Execute obsbot.py (or something like that)
+1. Load the .json file(s) for the program:
 
-this will start reading the images in the directory and open an image showing a plot with parameters of the last image.
+   The regular program is in the 2020B-0288/ directory and very easy to follow. 
 
-* Connect to the usual Zoom link (in notes) and share your screen with the observers. They will tell you if you will observe the regular program, or load any of the backup_scripts.
- 
+   - The json files are named as <DATE_UT>_<UT_TIME>.
+   - There is (usually) one script per hour.
+   - ** Pick each script according to the date and UT time, going in order by date/time. **
+   - Start the program at Sun altitude -14 deg, if observing on 1st half of the night.
+   - GUIDER: if observing in a narrowband filter (name start with "N"), then increase exposure time to 1200 msec.
+   
+2. Start the obsbot!
+
+   The "obsbot" is a Python program that measures several parameters of the images during the night. To run it:
+   
+   a. In the observer2 VNC, open a new terminal.
+
+   v. Go to the obsbot directory:
+
+      [DECamObserver]$ cd ~/obsbot
+
+   c. Run "bash":
+   
+      [DECamObserver]$ bash
+
+   d. Start copilot:
+      [DECamObserver]$ source copilot.sh
+      
+   copilot may initially show data from previous night, but it will automatically update once data collection starts.
+   
+   You can minimize the terminal running copilot (but know where this terminal is because you will need it at the end of the night).
+
+   Note: If you do not see the plot updating, then check and make sure that the rawdata symlink under ~/obsbot is pointing to the Merian raw data directory:
+
+   e. Check that the link points to Merian rawdata:
+
+      [DECamObserver]$ ls -la
+      
+      => the rawdata symbolic link should point to the correct path: /home4/images/fits/2020B-0288/
+
+   f. ONLY IF the path is wrong, then you have to set the correct path doing the three steps below:
+
+      [DECamObserver]$ rm ~/obsbot/rawdata
+      
+      [DECamObserver]$ cd ~/obsbot
+
+      [DECamObserver]$ ln -s /home4/images/fits/2020B-0288/ rawdata
+      
+3. Connect to the usual Zoom link (in the notes) and share your screen with the observers. They will tell you if you will observe the regular program, or load any of the backup_scripts.
+
+4. Monitor the Guider exposure time:
+
+   - Increase guider exposure time for narrowband filters (900 to 1200 miliseconds is OK).
+   - If cloudy, you can go even for 2400 msec.
+   - The backup_program may contain broadband filters. In that case, reduce exposure time to ~300 msec.
+   - Reduding the guider exposure time is also important for crowded fields. You can ask the operator for advice/help.
+
 ** SELECTING A BACKUP PROGRAM **
 
 There are multiple json files in the backup program. You need to first open the file called "output.log" and scrool down to the text table titled "BACKUP FIELD INFO". The table lists multiple fields and the respective airmass at the UTC times on the first row. Pick any field with load airmass for the UTC time. You can pick any considering +/- 30 minutes from the listed time in the table (as long as the airmass is OK). 

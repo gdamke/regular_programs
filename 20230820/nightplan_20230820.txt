@@ -19,6 +19,14 @@ Moon position (deg): RA 198.5, Dec -7.0 Phase: 0.258
 
 -----------------------------------------------
 
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
 +++ First half program: Chiti (MAGIC)
 
 2023B-646244 (PI: Chiti)
@@ -37,7 +45,30 @@ Observers: Guillermo Damke, Roque Ruiz (training)
 
 ==== First half of the night ====
 
-   # DELETE THIS LINE AND FILL IN THE INSTRUCTIONS BELOW 
+Night Plan:
+Scripts are located in the 2023B-646244/ Github folder.
+Alternatively, the are here https://drive.google.com/drive/folders/19bisJdjf8vatpMS6MW3r1rgIKvCuagq0
+
+The *important* thing to remember with this program is that the exposure time of the guider needs to be setup to 2400ms
+
+kentools qcInv will not give teff for exposures taken with the N395 filter, but running seeingall should give a value for the PSF FWHM.
+
+Sometimes seeingall gets the ellipticity very wrong, opening an image and running seeing will give a more accurate number.
+
+We ask that observers run seeingall (and seeing if necessary) after each N395 image and record the value in the “Data Quality” section in the Google Doc (see Drive notes for link).
+
+We ask that observers take a 30s exposure with the g-band filter at the end of every .json script (every ~1 hour) and log the qcInv teff from that exposure. This will allow us to coarsely monitor image quality throughout the night.
+
+At the end of the night please post the output of qcInv (or inv) in the Google Doc log so we can map between exposure number and MAGIC field number
+
+23:22 UT: Start MAGIC (scripts in 2023B-646244/ folder or Drive folder with date)
+
+04:05 UT: (if conditions are good; seeing < ~1.2”; teff > 0.3): Tuc 5 (3 x 720s)
+      - tuc5_N395.json
+      
+04:47 UT: End of half night
+
+Don’t forget the night report!
 
 -----------------------------------------------
    Midpoint   00:46 -04  04:46 UT

@@ -1,0 +1,62 @@
+###########################################
+#### DECam Observing Plan for 20230822 ####
+###########################################
+
+Night ephemeris
+
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:29 -04  22:29 UT   15:50  238 deg  
+Eve. -10   19:04 -04  23:04 UT   16:25  246 deg  Zeropoint; standards
+Eve. -14   19:23 -04  23:23 UT   16:44  251 deg  Begin obstac
+Eve. -18   19:42 -04  23:42 UT   17:03  256 deg  Last chance standards
+Moonset    00:08 -04  04:08 UT   21:29  322 deg  
+Midpoint   00:46 -04  04:46 UT   22:06  332 deg  
+Morn -18   05:49 -04  09:49 UT   03:10   48 deg  Begin astronomical twilight
+Morn -14   06:07 -04  10:07 UT   03:27   52 deg  End obstac; begin standards
+Morn -10   06:27 -04  10:27 UT   03:47   57 deg  
+Sunrise    07:02 -04  11:02 UT   04:23   66 deg  
+Moon position (deg): RA 221.5, Dec -17.5 Phase: 0.376
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++ First half program: Dey and Schlegel
+
+  2023B-307896 (PI: Dey, Schlegel)
+
+  Science Support: Kathy Vivas
+  Observers: Javier Fuentes
+
++++ Second half program: Chiti (MAGIC)
+
+  2023B-646244 (PI: Chiti)
+
+  Science Support: K. Vivas
+  Observers: Javier Fuentes
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+ Propid: 2023B-307896
+
+  #### INSERT PROGRAM HERE AND DELETE THIS LINE ####
+  
+-----------------------------------------------
+   Midpoint   00:46 -04  04:46 UT
+-----------------------------------------------
+
+==== Second half of the night ====
+
+ Change to propid 2023B-646244 (PI: Chiti)
+ 
+  #### INSERT PROGRAM HERE AND DELETE THIS LINE ####
+ 
+ 

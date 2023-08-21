@@ -19,6 +19,14 @@ Moon position (deg): RA 177.4, Dec 4.1 Phase: 0.149
 
 -----------------------------------------------
 
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
 +++ First half program: DECAT
 
 2023A-237157 (PI: Narayan, Rest)

@@ -39,7 +39,7 @@
    If the output says ```Your branch is behind 'origin/main' by N commits``` then do the step 5.
 
 
-5. Finally *pull* the changes from Guthub to update your local copy with:
+5. Finally *pull* the changes from Github to update your local copy with:
    ```
    git pull
    ```

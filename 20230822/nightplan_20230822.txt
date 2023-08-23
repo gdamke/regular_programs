@@ -93,8 +93,12 @@ NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This
 Plan:
 
 - 04:47 UT Start MAGIC (scripts 20230822 folder):
-
-
+	20230823_04:45:51.json
+	20230823_05:48:21.json
+	20230823_06:50:51.json
+	20230823_07:53:21.json
+	20230823_08:56:21.json
+	20230823_09:59:51.json
 - Any window between 05:00 UT and 08:00 UT (if conditions are good; seeing < ~1.2”; teff > 0.3): Tuc 5 (3 x 720s)
 tuc5_N395.json
 - 10:09 UT End of night

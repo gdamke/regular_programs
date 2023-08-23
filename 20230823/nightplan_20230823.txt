@@ -1,0 +1,99 @@
+###########################################
+#### DECam Observing Plan for 20230823 ####
+###########################################
+
+Night ephemeris
+
+mjd 60180, date 20230823, Site CTIO, UT-offset 4 hr
+Current local time 18:21 -04     UT 22:21     SidTim 15:46
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:30 -04  22:30 UT   15:54  238 deg  
+Eve. -10   19:05 -04  23:05 UT   16:30  248 deg  Zeropoint; standards
+Eve. -14   19:24 -04  23:24 UT   16:48  252 deg  Begin obstac
+Eve. -18   19:42 -04  23:42 UT   17:07  257 deg  Last chance standards
+Midpoint   00:45 -04  04:45 UT   22:10  332 deg  
+Moonset    01:11 -04  05:11 UT   22:35  339 deg  
+Morn -18   05:48 -04  09:48 UT   03:13   48 deg  Begin astronomical twilight
+Morn -14   06:06 -04  10:06 UT   03:30   52 deg  End obstac; begin standards
+Morn -10   06:26 -04  10:26 UT   03:50   58 deg  
+Sunrise    07:01 -04  11:01 UT   04:26   66 deg  
+Moon position (deg): RA 234.4, Dec -21.9 Phase: 0.442
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++ First half program: Drlica-Wagner (DELVE survey)
+
+  2019A-0305 (PI: Drilca-Wagner)
+
+  Science Support: Kathy Vivas
+  Observers: Javier Fuentes
+
++++ Second half program: Chiti (MAGIC survey)
+
+  2023B-646244 (PI: Chiti)
+
+  Science Support: K. Vivas
+  Observers: Javier Fuentes
+
+
+NOTE: Both programs are using the same Log File. Instructions and Log here:
+
+https://docs.google.com/document/d/1FFjrjMknJKUyPfemXMdUUCDnsPnJWKJsecTpilb3cdM/edit?usp=sharing
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+ Propid: 2019A-0305 
+
+Contact: Alex Drlica-Wagner (kadrlica@fnal.gov)
+
+Scripts in folder 20230823, and also here: https://drive.google.com/drive/folders/1m-RjOSB7_4-_mXvLbmC53c-pHyX7Olvo?usp=sharing
+
+Observing Plan:
+
+- 23:23 UT: Start DELVE WIDE scripts:
+	20230823_23:23:00.json
+	20230824_00:24:30.json
+	20230824_01:25:30.json
+	20230824_02:25:30.json
+	20230824_03:20:00.json
+	20230824_04:20:24.json
+- 04:47 UT: Handover to MAGIC (Chiti)
+
+In the log record only the timeline. No need to log the image quality for each image.
+
+-----------------------------------------------
+   Midpoint   00:47 -04  04:47 UT
+-----------------------------------------------
+
+ Change to propid 2023B-646244 (PI: Chiti)
+ 
+- Log file here: https://docs.google.com/document/d/1FFjrjMknJKUyPfemXMdUUCDnsPnJWKJsecTpilb3cdM/edit?usp=sharing
+- The *important* thing to remember with this program is that the exposure time of the guider needs to be setup to 2400ms
+- kentools qcInv will not give teff for exposures taken with the N395 filter, but running seeingall should give a value for the PSF FWHM. 
+- Sometimes seeingall gets the ellipticity very wrong, opening an image and running seeing will give a more accurate number. 
+- We ask that observers run seeingall (and seeing if necessary) after each N395 image and record the value in the “Data Quality” section below.
+- We ask that observers take a 30s exposure with the g-band filter (g.json) at the end of every .json script (every ~1 hour) and log the qcInv teff from that exposure. This will allow us to coarsely monitor image quality throughout the night.
+- At the end of the night please post the output of qcInv (or inv) in the log so we can map between exposure number and MAGIC field number
+
+Plan:
+
+- 04:47 UT Start MAGIC (scripts 20230823 folder)
+	20230824_04:45:36.json
+	20230824_05:48:06.json
+	20230824_06:50:36.json
+	20230824_07:53:06.json
+	20230824_08:55:36.json
+	20230824_09:58:06.json
+- 10:09 UT End of night
+- Don’t forget the night report!
+

@@ -1,0 +1,136 @@
+###########################################
+#### DECam Observing Plan for 20230824 ####
+###########################################
+
+Night ephemeris
+
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:30 -04  22:30 UT   15:54  238 deg  
+Eve. -10   19:05 -04  23:05 UT   16:30  248 deg  Zeropoint; standards
+Eve. -14   19:24 -04  23:24 UT   16:48  252 deg  Begin obstac
+Eve. -18   19:42 -04  23:42 UT   17:07  257 deg  Last chance standards
+Midpoint   00:45 -04  04:45 UT   22:10  332 deg  
+Moonset    01:11 -04  05:11 UT   22:35  339 deg  
+Morn -18   05:48 -04  09:48 UT   03:13   48 deg  Begin astronomical twilight
+Morn -14   06:06 -04  10:06 UT   03:30   52 deg  End obstac; begin standards
+Morn -10   06:26 -04  10:26 UT   03:50   58 deg  
+Sunrise    07:01 -04  11:01 UT   04:26   66 deg  
+Moon position (deg): RA 234.4, Dec -21.9 Phase: 0.442
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++ First half program: DECAT
+
+ 2023A-237157 (PI: Narayan, Rest)
+
+ Science Support: A. Zenteno
+ Observers: Alfredo Zenteno, Javier Fuentes (training)
+
++++ Second half program: DECAT
+
+ 2023A-237157 (PI: Narayan, Rest)
+
+ Science Support: A. Zenteno
+ Observers: Alfredo Zenteno, Javier Fuentes (training)
+
+-----------------------------------------------
+
+==== First half of the night ====
+
+Plan can be found in GitHub: https://github.com/gnarayan/decat_pointings
+
+ Propid: 2023A-237157 (PI: Narayan, Rest)
+ 
+ DECAT: 
+ 
+ A. Start right after pointing is done.
+
+  Contact: the queue is usually organized by Armin Rest (check email address in internal Doc).
+  The group usually communicates through slack but not all the CTIO staff is there.
+
+ B. Scripts and observing plan is located IN A SEPARATE DECAT GITHUB REPOSITORY (https://github.com/gnarayan/decat_pointings)
+    but UPDATED LOCALY IN THE COMPUTER AT OBSERVER ROOM (lasrem0).
+
+ C. You have to update the plan after confirmation that it has been updated
+    (they tend to do it very close to the start of the night (or seldom close to the night midpoint), if observing on the second half).
+
+ +++ UPDATING THE NIGHT PLAN FROM THE DECAT REPOSITORY +++
+ (*** Note that the DECAT repo is different than the "regular_programs" repository ***)
+
+   - If you are a git user (or if you want to follow these few simple steps below):
+     The DECAT repository is cloned from git in the local machine at the observing room. 
+     You need to pull the latest changes from the repository, doing the following:
+
+     1. Open a Terminal, then go to the home directory and type the command:
+
+        [DECamObserver]$ cd ~/DECAT_program/decat_pointings
+
+
+     2. Check if you are in the repository directory with git status:
+   
+        [DECamObserver]$ git status
+
+        The output should show “#On branch main” in the first line.
+
+
+     3. Next, check for changes in the repository:
+   
+        [DECamObserver]$ git fetch
+
+        this will compare changes between the remote repository and your local copy.
+
+
+     4. Finally, update any pending changes by doing:
+   
+        [DECamObserver]$ git pull
+	
+        (Only if you made a mistake with git):
+           you can delete the whole repository and clone it again:
+	
+           [DECamObserver]$ cd ~/DECAT_program
+           [DECamObserver]$ rm -rf decat_pointings
+           [DECamObserver]$ git clone https://github.com/gnarayan/decat_pointings.git
+
+   - If you are not git user, you can download the full directory (in the main directory: Code → Download ZIP).
+     There are many things there. You will be interested in:
+  
+     Observing plan: in 2023B/202308XX/20230824_obsplan.txt   (replace by today’s date)
+     Scripts: in ~/DECAT_program/decat_pointings/jsons/
+     There is a folder for each program in the DECAT alliance.
+
+ +++ DOING THE OBSERVATIONS +++
+
+     The repository will have an observing plan with the UT date of the beginning of the night. 
+     1. Go to the directory that will look like the one below (CHANGE THE DATE!)
+   
+       [DECamObserver]$ cd ~/DECAT_program/decat_pointings/2023B/20230824
+	
+     2. Next, just follow the plan in the text file in the directory. *Warning: many jsons to load through the night!!!*
+
+ *** If you are getting behind the program ***
+
+     Check the instruction at the beginning of the DECAT night plan, it will tell you how to identify the objects that you can skip to get back on track.
+
+ *** If you’re having trouble finding a script ***
+ 
+     Go to the jsons/ directory and use the "find" command in the Terminal.
+     For example, to find the script for "C3" object, just run the command below and check the output:
+   
+       [DECamObserver]$ find . -iname “*C3*”
+
+-----------------------------------------------
+   Midpoint   00:46 -04  04:46 UT
+-----------------------------------------------
+
+==== Second half of the night ====
+
+   Continue with DECAT.
+ 

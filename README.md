@@ -45,6 +45,10 @@
    ```
    The output should say ```Your branch is up to date with 'origin/main'.```
 
+  **and that's it!**
+
+---
+
 **Alternatively, if the steps above seem complicated, you can download the whole repository in ZIP format from Github by clicking on gree *Code* button and then *Download ZIP*. Then, extract the file somewhere.**
 
 

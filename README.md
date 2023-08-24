@@ -79,7 +79,7 @@
    
    The output should contain a message saying ```On branch main```. **Beware that the message also may say that ```Your branch is up to date with 'origin/main'.```, but your local branch may be outdated anyway!**
    
-2. Check if your local repository is updated with respect to the Github repo:
+2. Check if your local repository is up-to-date with respect to the Github repo:
 
    ```
    git fetch
@@ -93,27 +93,32 @@
    ```
 
 
-4. Make all the changes in your local copy. At minimum, the plan must contain:
-   - a directory with name formatted as ```yyyymmdd``` (for example, 20230823/)
-   - a text file (within the night directory) containing:
-     - the night ephemeris (copy and paste from `ephem` command in Kentools.
-     - the propids, observer and support for the first- and second-half of the night (copy and paste from Kathy's Google calendar).
-     - the plan for the first half (copy it from `templates/` directory -> this is work in progress, so copy it from a previous night observing the same program)
-     - the hour of the night midpoint
-     - the plan for the second half (copy it from `templates/` directory -> this is work in progress, so copy it from a previous night observing the same program)
+4. Make the night plan in your local machine. The plan is made within directory with name formatted as ```yyyymmdd/``` (for example, 20230823/) within the `regular_programs/` directory.
+
+   Within the night directory, your plan should contain:
+   
+   - a text file named `nightplan_yyyymmdd.txt` (copy and rename it from `templates/` directory (work in progress, so copy it from a previous night)) where you'll include:
+     
+      - the date in the first line
+      - the night ephemeris (copy and paste from `ephem` command in Kentools.
+      - the propids, observer name and scientific support for the first- and second-half of the night (copy and paste from Kathy's Google calendar).
+      - the plan for the first half (copy it from `templates/` directory -> this is work in progress, so copy it from a previous night observing the same program)
+      - the time of the night midpoint
+      - the plan for the second half (copy it from `templates/` directory -> this is work in progress, so copy it from a previous night observing the same program)
+        
    - add the required .json files for each half of the night. Create a separate directory using the respective `propid/` as the directory name.
    
    Note: for DECAT, we only copy the instructions to the nightplan file from the template (in progress, so use a previous night) with instructions to update the separate `DECAT_pointings/` repository.
 
 
-6. *Add* all the new and updated files to the local repository.
-   -> you can list the files that will be changed with ```git status```. Next, you can add them one-by-one, or add ***all files*** with:
+6. *Add* all new and updated files and directories to the local repository.
+   -> you can list the files that will be changed with ```git status```. Next, you can add them one-by-one with `git add <filename>`, or add ***all files*** at once with:
 
    ```
    git add *
    ```
    
-7. *Commit* the file *to your local repository*. It is good practice to add a *message* to the commit that summarizes the commit. For example "Add night plan for 20230823"
+7. *Commit* the file *to your local repository*. It is good practice to add a *message* that summarizes the commit. For example `git commit -m"Add night plan for 20230823"`
 
    ```
    git commit -m"Write a summary message in this line"

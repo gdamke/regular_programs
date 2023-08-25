@@ -67,11 +67,18 @@
    Open a Terminal and go to the directory where you will clone the repository.
    For example, if you do this in your home directory (```~/```), then the repository will become ```~/regular_programs``` after clonning.
 
-   ```
-   git clone https://github.com/gdamke/regular_programs.git
-   ```
+   - If you use SSH authentication (recommended by Github), then use the command below and follow instructions in Github to [configure SSH keys](https://github.com/settings/keys).
 
-1. Go to the repo dir ```cd repository/path/here``` and check that you are in the repository directory with ```git status```:
+     ```
+     git clone git@github.com:gdamke/regular_programs.git
+     ```
+   - If you use HTTPS, you need to generate a token (follow Github instructions) and use the command below:
+
+     ```
+     git clone https://github.com/gdamke/regular_programs.git
+     ```
+
+2. Go to the repo dir ```cd repository/path/here``` and check that you are in the repository directory with ```git status```:
    
    ```
    git status
@@ -79,21 +86,21 @@
    
    The output should contain a message saying ```On branch main```. **Beware that the message also may say that ```Your branch is up to date with 'origin/main'.```, but your local branch may be outdated anyway!**
    
-2. Check if your local repository is up-to-date with respect to the Github repo:
+3. Check if your local repository is up-to-date with respect to the Github repo:
 
    ```
    git fetch
    ```
    
    
-3. Pull (update from Github) the changes (if any found in step 2) in your local repository:
+4. Pull (update from Github) the changes (if any found in step 2) in your local repository:
 
    ```
    git pull
    ```
 
 
-4. Make the night plan in your local machine. The plan is made within directory with name formatted as ```yyyymmdd/``` (for example, 20230823/) within the `regular_programs/` directory.
+5. Make the night plan in your local machine. The plan is made within directory with name formatted as ```yyyymmdd/``` (for example, 20230823/) within the `regular_programs/` directory.
 
    Within the night directory, your plan should contain:
    

@@ -106,7 +106,7 @@ Contact: Edward Lin (check email address in internal Doc).
 Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
 There is a single script that should last the full half-night. It is a single block with count=140.
 
-** Script from this git repository within 2023B-662232/ directory **
+** Script from this git repository within 2023B-662232/(JT1_0825.json) directory **
 
 Alternatively, script in observer2 and in the Google Drive:
 

@@ -95,8 +95,41 @@ NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This
 -----------------------------------------------
 
  Change to propid 2023B-662232 (PI: Lin)
- 
-- 04:45 UT Start
-  	JT1_0825
-- 10:23 UT End of night
 
+
+*** FIRST: IT IS MANDATORY TO UPDATE THE PROPID IN THE "Exposure Control" WINDOW ***
+*** Use prop-id: 2023B-662232
+*** In case of trouble, use last semester propid: 2023A-423737
+
+Contact: Edward Lin (check email address in internal Doc).
+
+Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
+There is a single script that should last the full half-night. It is a single block with count=140.
+
+** Script from this git repository within 2023B-662232/ directory **
+
+Alternatively, script in observer2 and in the Google Drive:
+
+   ~/ExposureScripts/User_scripts/2023A-423737/JT1_0818_corrected.json
+
+Script will have exposures for the full half-night. However, delete observations or load the script again if you are behind/ahead of time.
+
+IMPORTANT NOTE:
+
+   If observing on first half of the night:
+      Field starts at very high airmass (if first half of the night). Start this program when the Sun is at ~ -12.5. There will be no vignetting by the lower shutter (but just).
+
+   If observing on second half of the night:
+      Keep monitoring the end of the night when the field is setting with the PF webcam and stop before vignetting, if needed. Also, check the total background counts of last image and stop if background > ~18k counts. To check the counts, go to Kentools terminal (the one with "prompt>") and type "load". Check the counts in DS9.
+
+No need for standard star fields.
+
+Observer support/telescope operator should be able to handle this program.
+
+Finally, send the qcInv file to the PI:
+
+    - From the database window ("pgtcl>" prompt), type:
+       pgtcl> qcInvPrint
+
+    - That will create a .qcInv text file with the night date. Copy it over SSH (scp) to the lasrem0 (remote observing room machine) and then email it to Edward.
+    

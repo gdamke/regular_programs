@@ -1,23 +1,23 @@
 ###########################################
-#### DECam Observing Plan for 20230825 ####
+#### DECam Observing Plan for 20230826 ####
 ###########################################
 
 Night ephemeris
 
-mjd 60182, date 20230825, Site CTIO, UT-offset 4 hr
-Current local time 15:38 -04     UT 19:38     SidTim 13:10
+mjd 60183, date 20230826, Site CTIO, UT-offset 4 hr
+Current local time 18:25 -04     UT 22:25     SidTim 16:02
 Event      Local-Time  Greenwich  Sidereal-Time
-Sunset     18:31 -04  22:31 UT   16:03  241 deg  
-Eve. -10   19:06 -04  23:06 UT   16:39  250 deg  Zeropoint; standards
-Eve. -14   19:25 -04  23:25 UT   16:57  254 deg  Begin obstac
-Eve. -18   19:43 -04  23:43 UT   17:16  259 deg  Last chance standards
-Midpoint   00:45 -04  04:45 UT   22:17  334 deg  
-Moonset    03:21 -04  07:21 UT   00:54   14 deg  
-Morn -18   05:46 -04  09:46 UT   03:19   50 deg  Begin astronomical twilight
-Morn -14   06:03 -04  10:03 UT   03:36   54 deg  End obstac; begin standards
-Morn -10   06:23 -04  10:23 UT   03:56   59 deg  
-Sunrise    06:59 -04  10:59 UT   04:31   68 deg  
-Moon position (deg): RA 263.6, Dec -27.4 Phase: 0.594
+Sunset     18:31 -04  22:31 UT   16:08  242 deg  
+Eve. -10   19:06 -04  23:06 UT   16:43  251 deg  Zeropoint; standards
+Eve. -14   19:25 -04  23:25 UT   17:02  256 deg  Begin obstac
+Eve. -18   19:44 -04  23:44 UT   17:20  260 deg  Last chance standards
+Midpoint   00:44 -04  04:44 UT   22:21  335 deg  
+Moonset    04:24 -04  08:24 UT   02:01   30 deg  
+Morn -18   05:45 -04  09:45 UT   03:22   50 deg  Begin astronomical twilight
+Morn -14   06:02 -04  10:02 UT   03:39   55 deg  End obstac; begin standards
+Morn -10   06:22 -04  10:22 UT   03:59   60 deg  
+Sunrise    06:57 -04  10:57 UT   04:34   68 deg  
+Moon position (deg): RA 279.7, Dec -27.8 Phase: 0.678
 
 -----------------------------------------------
 
@@ -29,23 +29,15 @@ Moon position (deg): RA 263.6, Dec -27.4 Phase: 0.594
 
 -----------------------------------------------
 
-+++ First half program: Dey and Schlegel
++++ program: Dey and Schlegel
 
   2023B-307896 (PI: Dey, Schlegel)
 
   Science Support: Alfredo Zenteno
   Observers: Javier Fuentes
 
-+++ Second half program: Edward Lin
-
-  2023B-662232 (PI: Lin)
-
-  Science Support: Alfredo Zenteno
-  Observers: Javier Fuentes
-
 -----------------------------------------------
 
-==== First half of the night ====
 
  Propid: 2023B-307896 (but actually use 2014B-0404 -- IMPORTANT!)
 
@@ -74,7 +66,7 @@ To start the bot:
 	vncviewer :1   (same password we use for :7 or :3))
         The above will open a vncviewer which will have 3 windows running. Do not close any. Some plots will be generated automatically once observing starts
 - When the time comes, start decbot. To do that, in a terminal (ssh -X -Y declsp@observer2.ctio.noao.edu (get password from Kathy)), being at ~/obsbot/, run:
-        python2.7 -u decbot.py --exptime=80 | tee -a decbot-2023-08-04.log  (CHANGE THE DATE WITH THE START OF THE NIGHT DATE)
+        python2.7 -u decbot.py --exptime=80 | tee -a decbot-2023-08-26.log  (CHANGE THE DATE WITH THE START OF THE NIGHT DATE)
 	That will start feeding the queue with 2 exposures at the time
 	Click Go in the Observer Console. And that’s it!
 - During the night check the pointing and make corrections if values get larger than ~20 arcsec. You can see the pointing in one of the plots generated automatically in the vncviewer :1  (but do not use those numbers since they have the wrong sign to what the operators need. Better do center in kentools)
@@ -83,54 +75,9 @@ To start the bot:
 	declsp@observer2% cd
 	declsp@observer2% bin/end_of_night_no_internet YYYY-MM-DD firstScienceImage
 	The end_of_night_no_internet script will close the vncviewer (do not close it yourself) and it will generate some summary plots. It takes some time. Be patient.
-	Copy the resulting figures, say for 2023-08-04, to your computer: 
-	     scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-08-04/\*.png .
+	Copy the resulting figures, say for 2023-08-26, to your computer: 
+	     scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-08-26/\*.png .
              scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
 	Upload those plots to the Google drive above. Send an email with a summary of the night (any bad image? Anything in particular to report?) to the contact people above.
 
 NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This option should be just a plan B because decbot will adjust the exposure time with current conditions. The script has a fixed exposure time.
-
-
------------------------------------------------
-   Midpoint   00:46 -04  04:46 UT
------------------------------------------------
-
- Change to propid 2023B-662232 (PI: Lin)
-
-
-*** FIRST: IT IS MANDATORY TO UPDATE THE PROPID IN THE "Exposure Control" WINDOW ***
-*** Use prop-id: 2023B-662232
-*** In case of trouble, use last semester propid: 2023A-423737
-
-Contact: Edward Lin (check email address in internal Doc).
-
-Observing plan is very simple: 2-minute exposures in VR fitler (or r-band if VR not mounted) of a single field repeated all night.
-There is a single script that should last the full half-night. It is a single block with count=140.
-
-** Script from this git repository within 2023B-662232/(JT1_0825.json) directory **
-
-Alternatively, script in observer2 and in the Google Drive:
-
-   ~/ExposureScripts/User_scripts/2023A-423737/JT1_0818_corrected.json
-
-Script will have exposures for the full half-night. However, delete observations or load the script again if you are behind/ahead of time.
-
-IMPORTANT NOTE:
-
-   If observing on first half of the night:
-      Field starts at very high airmass (if first half of the night). Start this program when the Sun is at ~ -12.5. There will be no vignetting by the lower shutter (but just).
-
-   If observing on second half of the night:
-      Keep monitoring the end of the night when the field is setting with the PF webcam and stop before vignetting, if needed. Also, check the total background counts of last image and stop if background > ~18k counts. To check the counts, go to Kentools terminal (the one with "prompt>") and type "load". Check the counts in DS9.
-
-No need for standard star fields.
-
-Observer support/telescope operator should be able to handle this program.
-
-Finally, send the qcInv file to the PI:
-
-    - From the database window ("pgtcl>" prompt), type:
-       pgtcl> qcInvPrint
-
-    - That will create a .qcInv text file with the night date. Copy it over SSH (scp) to the lasrem0 (remote observing room machine) and then email it to Edward.
-    

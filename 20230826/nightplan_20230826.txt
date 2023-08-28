@@ -78,6 +78,15 @@ To start the bot:
 	Copy the resulting figures, say for 2023-08-26, to your computer: 
 	     scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-08-26/\*.png .
              scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
-	Upload those plots to the Google drive above. Send an email with a summary of the night (any bad image? Anything in particular to report?) to the contact people above.
+
+- Upload those plots and file to the Google drive above. It is ok to replace a file with the same name already in the drive.
+- Run the following commands (in declsp@observer2):
+      	     bash
+	     cd ~/obsbot
+	     python2.7 copilot.py --fits=obs_decam.fits
+- Copy the resulting file to your computer and upload it to the same google drive. It is ok to replace a file with the same name already in the drive.
+       	     scp declsp@observer2.ctio.noao.edu:obsbot/obs_decam.fits .
+- Send an email with a summary of the night (any bad image? Anything in particular to report?) to the contact people above.
+
 
 NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This option should be just a plan B because decbot will adjust the exposure time with current conditions. The script has a fixed exposure time.

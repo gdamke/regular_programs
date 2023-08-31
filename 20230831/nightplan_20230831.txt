@@ -1,0 +1,76 @@
+###########################################
+#### DECam Observing Plan for 20230831
+####
+###########################################
+
+Night ephemeris
+
+mjd 60188, date 20230831, Site CTIO, UT-offset 4 hr
+Current local time 09:15 -04   UT 13:15   SidTim 07:11
+Event   Local-Time Greenwich Sidereal-Time
+Sunset   18:34 -04 22:34 UT  16:30 248 deg
+Eve. -10  19:09 -04 23:09 UT  17:05 256 deg Zeropoint; standards
+Moonrise  19:22 -04 23:22 UT  17:19 260 deg
+Eve. -14  19:28 -04 23:28 UT  17:24 261 deg Begin obstac
+Eve. -18  19:46 -04 23:46 UT  17:42 266 deg Last chance standards
+Midpoint  00:43 -04 04:43 UT  22:39 340 deg
+Morn -18  05:40 -04 09:40 UT  03:36  54 deg Begin astronomical twilight
+Morn -14  05:57 -04 09:57 UT  03:53  58 deg End obstac; begin standards
+Morn -10  06:17 -04 10:17 UT  04:13  63 deg
+Sunrise  06:52 -04 10:52 UT  04:48  72 deg
+Moon position (deg): RA 356.3, Dec -4.2 Phase: 0.920
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++  Program all night: Drlica-Wagner (DELVE survey)
+
+  2019A-0305 (PI: Drilca-Wagner)
+
+  Science Support: Kathy Vivas
+  Observers: Lindsay Magill
+
+-----------------------------------------------
+
+
+Propid: 2019A-0305 
+
+Contact: Alex Drlica-Wagner (kadrlica@fnal.gov)
+
+Scripts in folder 20230823, and also here: https://drive.google.com/drive/folders/1m-RjOSB7_4-_mXvLbmC53c-pHyX7Olvo?usp=sharing
+
+Observing Plan:
+
+- Log file here: https://docs.google.com/document/d/1FFjrjMknJKUyPfemXMdUUCDnsPnJWKJsecTpilb3cdM/edit?usp=sharing
+
+- 23:28 UT: Start DELVE EXTRA scripts:
+	https://drive.google.com/drive/folders/1wZNHjff6yrP3UQlIHp4mCdcPObg_vJF-?usp=sharing 
+	Script names have the format Date_hour.json (In UT). If you start late or need to stop because of problems/clouds, just choose the script closer in time when restarting.
+
+	20230831_23:28:47.json
+	20230901_00:30:17.json
+	20230901_01:30:47.json
+	20230901_02:31:47.json
+	20230901_03:32:47.json
+	20230901_04:32:47.json
+	20230901_05:34:17.json
+	20230901_06:35:17.json
+	20230901_07:35:17.json
+	20230901_08:35:17.json
+	20230901_09:35:17.json
+
+- 09:57 UT: End observing
+
+- Please send output of qcInv to Alex Drlica-Wagner 
+
+- In the log record only the timeline. No need to log the image quality for each image.
+
+- Don't forget the night report!
+

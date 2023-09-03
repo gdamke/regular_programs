@@ -1,0 +1,73 @@
+###########################################
+#### DECam Observing Plan for 20230901
+####
+###########################################
+
+Night ephemeris
+
+mjd 60189, date 20230901, Site CTIO, UT-offset 4 hr
+Current local time 17:59 -04     UT 21:59     SidTim 16:00
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     18:34 -04  22:34 UT   16:35  249 deg  
+Eve. -10   19:09 -04  23:09 UT   17:10  258 deg  Zeropoint; standards
+Eve. -14   19:28 -04  23:28 UT   17:28  262 deg  Begin obstac
+Eve. -18   19:47 -04  23:47 UT   17:47  267 deg  Last chance standards
+Moonrise   20:31 -04  00:31 UT   18:31  278 deg  
+Midpoint   00:43 -04  04:43 UT   22:43  341 deg  
+Morn -18   05:38 -04  09:38 UT   03:39   55 deg  Begin astronomical twilight
+Morn -14   05:56 -04  09:56 UT   03:56   59 deg  End obstac; begin standards
+Morn -10   06:16 -04  10:16 UT   04:16   64 deg  
+Sunrise    06:51 -04  10:51 UT   04:51   73 deg  
+Moon position (deg): RA 9.7, Dec 2.9 Phase: 0.852
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++  Program all night: Drlica-Wagner (DELVE survey)
+
+  2023B-879130 (PI: Drilca-Wagner)
+
+  Science Support: Kathy Vivas
+  Observers: Joy Chavez
+
+-----------------------------------------------
+
+Propid: 2023B-879130 
+
+Contact: Alex Drlica-Wagner (kadrlica@fnal.gov)
+
+Scripts in folder 20230901, and also here: https://drive.google.com/drive/folders/1m-RjOSB7_4-_mXvLbmC53c-pHyX7Olvo?usp=sharing
+
+Observing Plan:
+
+- Log file here: https://docs.google.com/document/d/1FFjrjMknJKUyPfemXMdUUCDnsPnJWKJsecTpilb3cdM/edit?usp=sharing
+
+- 23:28 UT: Start DELVE EXTRA scripts:
+
+	20230901_23:30:31.json
+	20230902_00:30:31.json
+	20230902_01:30:31.json
+	20230902_02:30:31.json
+	20230902_03:30:31.json
+	20230902_04:30:31.json
+	20230902_05:31:01.json
+	20230902_06:32:31.json
+	20230902_07:34:01.json
+	20230902_08:35:01.json
+	20230902_09:36:01.json
+
+- 09:56 UT: End observing
+
+- Please send output of qcInv to Alex Drlica-Wagner (kadrlica@uchicago.edu)
+
+- In the log record only the timeline. No need to log the image quality for each image.
+
+- Don't forget the night report!
+

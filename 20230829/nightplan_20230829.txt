@@ -106,12 +106,6 @@ NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This
  Change to propid 2023B-879130 (PI: Alex Drlica-Wagner)
  
 - Log file here: https://docs.google.com/document/d/1FFjrjMknJKUyPfemXMdUUCDnsPnJWKJsecTpilb3cdM/edit?usp=sharing
-- The *important* thing to remember with this program is that the exposure time of the guider needs to be setup to 2400ms
-- kentools qcInv will not give teff for exposures taken with the N395 filter, but running seeingall should give a value for the PSF FWHM. 
-- Sometimes seeingall gets the ellipticity very wrong, opening an image and running seeing will give a more accurate number. 
-- We ask that observers run seeingall (and seeing if necessary) after each N395 image and record the value in the “Data Quality” section below.
-- We ask that observers take a 30s exposure with the g-band filter (g.json) at the end of every .json script (every ~1 hour) and log the qcInv teff from that exposure. This will allow us to coarsely monitor image quality throughout the night.
-- At the end of the night please post the output of qcInv (or inv) in the log so we can map between exposure number and MAGIC field number
 
 Plan:
 

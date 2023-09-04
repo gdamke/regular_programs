@@ -31,7 +31,7 @@ Moon position (deg): RA 49.3, Dec 20.9 Phase: 0.651
 
 +++ First half program: Dey and Schlegel
 
-  2023B-307896 (PI: Dey, Schlegel) -- Use 2014B-0404 for SISPI GUIs.
+  2023B-307896 (PI: Dey, Schlegel) -- *Use 2014B-0404 for SISPI GUIs*.
 
   Science Support: Alfredo Zenteno
   Observers: Bernardita Ried
@@ -40,9 +40,9 @@ Moon position (deg): RA 49.3, Dec 20.9 Phase: 0.651
 -----------------------------------------------
 
 
- Propid: 2023B-307896 (but actually use 2014B-0404 -- IMPORTANT!)
+ Propid: 2023B-307896 (but actually *use 2014B-0404* -- IMPORTANT!)
 
-Contact: Arjun Dey (email address in Calendar), David Schlegel (email address in Calendar)
+Contact: Arjun Dey, David Schlegel (email addresses in Calendar)
 
 Google drive with materials for this project available in web browser's toolbar in observer's machine.
 
@@ -52,25 +52,25 @@ David Schlegel should send you by email the “strategy files” for the night w
 David will also send a plan B script (in which exposure times are fixed). Use plan B only if decbot does not work. Decbot will dynamically adjust the exposure time depending on the conditions of the previous image. They pretty much prefer that way to go.
 Copy the pass*json files to the decbot directory. In a terminal:
 
-       ssh -X -Y declsp@observer2.ctio.noao.edu   (get password from Kathy or any of the contacts above)
-       cd ~/obsbot
-       cp the pass*json files here. For example:
-	  declsp@observer2% scp /user/DECamObserver/vivas/DeySchlegel/pass1.json .
-	  declsp@observer2% scp /user/DECamObserver/vivas/DeySchlegel/pass2.json .
-	  declsp@observer2% scp /user/DECamObserver/vivas/DeySchlegel/pass3.json .
+        ssh -X -Y declsp@observer2.ctio.noao.edu   (get password from Kathy or any of the contacts above)
+       	cd ~/obsbot
+       	cp the pass*json files here. For example:
+       	declsp@observer2% scp /user/DECamObserver/vivas/DeySchlegel/pass\?.json .
+       	or
+       	scp pass\?.json declsp@observer2.ctio.noao.edu:~/obsbot/
 
 To start the bot:
-- SISPI: Setup SISPI with propID 2014B-0404. Do not use their new propID (2023A-*) because decbot does not have permission to send exposure request to SISPI with other propIDs
+- SISPI: Setup SISPI with propID *2014B-0404*. Do not use their new propID (2023A-*) because decbot does not have permission to send exposure request to SISPI with other propIDs
 - Start a vncviewer (it is a special one, not the one we usually use). In another terminal:
 
-	ssh -X -Y declsp@observer2.ctio.noao.edu 
+  	ssh -X -Y declsp@observer2.ctio.noao.edu 
 	cd
 	./bin/vnc
 	vncviewer :1   (same password we use for :7 or :3))
 
         The above will open a vncviewer which will have 3 windows running. Do not close any. Some plots will be generated automatically once observing starts
 
-- When the time comes, start decbot. To do that, in a terminal (ssh -X -Y declsp@observer2.ctio.noao.edu (get password from Kathy)) run:
+- When the time comes, start decbot. To do that, in a terminal (ssh -X -Y declsp@observer2.ctio.noao.edu, get password from Kathy/Alfredo) run:
 
         cd ~/obsbot/
         python2.7 -u decbot.py --exptime=80 | tee -a decbot-2023-09-04.log  (CHANGE THE DATE WITH THE START OF THE NIGHT DATE)
@@ -85,17 +85,22 @@ To start the bot:
 	declsp@observer2% cd
 	declsp@observer2% bin/end_of_night_no_internet YYYY-MM-DD firstScienceImage
 	The end_of_night_no_internet script will close the vncviewer (do not close it yourself) and it will generate some summary plots. It takes some time. Be patient.
-	Copy the resulting figures, say for 2023-08-04, to your computer: 
-	     scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-09-04/\*.png .
-             scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
+	Copy the resulting figures, say for 2023-09-04, to your computer: 
 
-- Upload those plots and file to the Google drive above. It is ok to replace a file with the same name already in the drive.
+	scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-09-04/\*.png .
+        scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
+
+- *Upload those plots and file to the Google drive above*. It is ok to replace a file with the same name already in the drive.
 - Run the following commands (in declsp@observer2):
-      	     bash
-	     cd ~/obsbot
-	     python2.7 copilot.py --fits=obs_decam.fits
+
+      	bash
+	cd ~/obsbot
+	python2.7 copilot.py --fits=obs_decam.fits
+
 - Copy the resulting file to your computer and upload it to the same google drive. It is ok to replace a file with the same name already in the drive.
-       	     scp declsp@observer2.ctio.noao.edu:obsbot/obs_decam.fits .
+
+       	scp declsp@observer2.ctio.noao.edu:obsbot/obs_decam.fits .
+
 - Send an email with a summary of the night (any bad image? Anything in particular to report?) to the contact people above.
 
 

@@ -195,7 +195,7 @@ X123.json [34, -4] 34 min
 
 !!! 04:10
 YSE 401 [37 0] 16 min                
-S12 [42,0] 22min
+S1S2 [42,0] 22min
 DEBASS/EVERYTHING/2023nnz_P2 [36 19] (3min) OPTIONAL
 DEBASS/EVERYTHING/2023olz_P1 [54 15] (3min)
 

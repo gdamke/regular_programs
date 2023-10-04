@@ -1,0 +1,122 @@
+[
+ {
+  "expType": "object",
+  "RA": 143.07692,
+  "dec": -12.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005350"
+ },
+ {
+  "expType": "object",
+  "RA": 141.86441,
+  "dec": -10.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005584"
+ },
+ {
+  "expType": "object",
+  "RA": 147.56757,
+  "dec": -22.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004208"
+ },
+ {
+  "expType": "object",
+  "RA": 145.26316,
+  "dec": -19.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004657"
+ },
+ {
+  "expType": "object",
+  "RA": 146.54867,
+  "dec": -21.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004431"
+ },
+ {
+  "expType": "object",
+  "RA": 143.07692,
+  "dec": -12.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005350"
+ },
+ {
+  "expType": "object",
+  "RA": 141.86441,
+  "dec": -10.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005584"
+ },
+ {
+  "expType": "object",
+  "RA": 147.56757,
+  "dec": -22.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004208"
+ },
+ {
+  "expType": "object",
+  "RA": 145.26316,
+  "dec": -19.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004657"
+ },
+ {
+  "expType": "object",
+  "RA": 146.54867,
+  "dec": -21.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004431"
+ },
+ {
+  "expType": "object",
+  "RA": 143.07692,
+  "dec": -12.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005350"
+ },
+ {
+  "expType": "object",
+  "RA": 141.86441,
+  "dec": -10.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "005584"
+ },
+ {
+  "expType": "object",
+  "RA": 147.56757,
+  "dec": -22.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004208"
+ },
+ {
+  "expType": "object",
+  "RA": 145.26316,
+  "dec": -19.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004657"
+ },
+ {
+  "expType": "object",
+  "RA": 146.54867,
+  "dec": -21.0,
+  "filter": "r",
+  "expTime": 20,
+  "object": "004431"
+  }
+]

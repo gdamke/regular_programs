@@ -1,0 +1,16 @@
+[
+ {
+  "expType": "object",
+  "RA": 3.583332,
+  "dec": -30.388278,
+  "filter": "z",
+  "expTime": 30,
+  "object": "A2744",
+  "seqid": "Single_Acquisition",
+  "seqtot": 1,
+  "count": 1,
+  "comment": "Acquisition Image z Band",
+  "exclude": "[BCAM]",
+  "centerCcd": "[S4;absolute;3.583332;-30.388278]"
+ }
+]

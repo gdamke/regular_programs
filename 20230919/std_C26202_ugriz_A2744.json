@@ -1,0 +1,44 @@
+[
+    {
+        "RA": "03:32:30", 
+        "comment": "Standard Star Field", 
+        "dec": "-27:46:05", 
+        "expType": "object", 
+        "exptime": 30.0, 
+        "filter": "u", 
+        "object": "C26202/HST", 
+        "program": "photom-std-field"
+    }, 
+    {
+        "comment": "Standard Star Field", 
+        "expType": "object", 
+        "exptime": 10.0, 
+        "filter": "g", 
+        "object": "C26202/HST", 
+        "program": "photom-std-field"
+    }, 
+    {
+        "comment": "Standard Star Field", 
+        "expType": "object", 
+        "exptime": 10.0, 
+        "filter": "r", 
+        "object": "C26202/HST", 
+        "program": "photom-std-field"
+    }, 
+    {
+        "comment": "Standard Star Field", 
+        "expType": "object", 
+        "exptime": 10.0, 
+        "filter": "i", 
+        "object": "C26202/HST", 
+        "program": "photom-std-field"
+    }, 
+    {
+        "comment": "Standard Star Field", 
+        "expType": "object", 
+        "exptime": 10.0, 
+        "filter": "z", 
+        "object": "C26202/HST", 
+        "program": "photom-std-field"
+    }
+]

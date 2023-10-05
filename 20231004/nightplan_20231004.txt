@@ -82,7 +82,7 @@ To start the bot:
 	The end_of_night_no_internet script will close the vncviewer (do not close it yourself) and it will generate some summary plots. It takes some time. Be patient.
 	Copy the resulting figures, say for 2023-10-04, to your computer: 
 
-	scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-10-04/\*.png .
+	scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-10-04\*.png .
         scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
 
 - *Upload those plots and file to the Google drive

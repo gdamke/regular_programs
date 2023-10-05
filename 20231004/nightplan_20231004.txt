@@ -86,32 +86,6 @@ To start the bot:
         scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
 
 - *Upload those plots and file to the Google drive
-	./bin/vnc
-	vncviewer :1   (same password we use for :7 or :3))
-
-        The above will open a vncviewer which will have 3 windows running. Do not close any. Some plots will be generated automatically once observing starts
-
-- When the time comes, start decbot. To do that, in a terminal (ssh -X -Y declsp@observer2.ctio.noao.edu, get password from Kathy/Alfredo) run:
-
-        cd ~/obsbot/
-        python2.7 -u decbot.py --exptime=80 | tee -a decbot-2023-10-04.log  (CHANGE THE DATE WITH THE START OF THE NIGHT DATE)
-
-	That will start feeding the queue with 2 exposures at the time
-	Click Go in the Observer Console. And that’s it!
-
-- During the night check the pointing and make corrections if values get larger than ~20 arcsec. You can see the pointing in one of the plots generated automatically in the vncviewer :1  (but do not use those numbers since they have the wrong sign to what the operators need. Better do center in kentools)
-- Start/end the observing with Sun at -12
-- At the end of night: (on the initial terminal you opened in your machine, not in the VNC)
-
-	declsp@observer2% cd
-	declsp@observer2% bin/end_of_night_no_internet 2023-10-04 firstScienceImage
-	The end_of_night_no_internet script will close the vncviewer (do not close it yourself) and it will generate some summary plots. It takes some time. Be patient.
-	Copy the resulting figures, say for 2023-10-04, to your computer: 
-
-	scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-10-04/\*.png .
-        scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
-
-- *Upload those plots and file to the Google drive above*. It is ok to replace a file with the same name already in the drive.
 - Run the following commands (in declsp@observer2):
 
       	bash

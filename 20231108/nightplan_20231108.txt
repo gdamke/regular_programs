@@ -1,0 +1,106 @@
+###########################################
+#### DECam Observing Plan for 20231108 ####
+###########################################
+
+Night ephemeris
+
+mjd 60257, date 20231108, Site CTIO, UT-offset 3 hr
+Current local time 14:33 -03     UT 17:33     SidTim 16:02
+Event      Local-Time  Greenwich  Sidereal-Time
+Sunset     20:18 -03  23:18 UT   21:47  327 deg  
+Eve. -10   20:56 -03  23:56 UT   22:25  336 deg  Zeropoint; standards
+Eve. -14   21:17 -03  00:17 UT   22:46  342 deg  Begin obstac
+Eve. -18   21:39 -03  00:39 UT   23:07  347 deg  Last chance standards
+Midpoint   01:26 -03  04:26 UT   02:55   44 deg  
+Moonrise   04:39 -03  07:39 UT   06:07   92 deg  
+Morn -18   05:14 -03  08:14 UT   06:42  100 deg  Begin astronomical twilight
+Morn -14   05:36 -03  08:36 UT   07:04  106 deg  End obstac; begin standards
+Morn -10   05:57 -03  08:57 UT   07:25  111 deg  
+Sunrise    06:35 -03  09:35 UT   08:03  121 deg  
+Moon position (deg): RA 179.8, Dec 3.3 Phase: 0.260
+
+-----------------------------------------------
+
+ Quick reminder:
+
+ + Within the vncviewer in observer2:
+   - Start Kentools by opening a new terminal and typing "observer". The commands available will be shown at startup.
+   - Start the database by opening a new terminal and typing "godb". The commands available will be shown at startup.
+
+-----------------------------------------------
+
++++ Second half program: Dey and Schlegel
+
+  2023B-307896 (PI: Dey, Schlegel) -- *Use 2014B-0404 for SISPI GUIs*.
+
+  Science Support: Alfredo Zenteno
+  Observers: Andrew Saydjari, Lluis Galbany
+
+
+-----------------------------------------------
+
+
+ Propid: 2023B-307896 (but actually *use 2014B-0404* -- IMPORTANT!)
+
+Contact: Arjun Dey, David Schlegel (email addresses in Calendar)
+
+Google drive with materials for this project available in web browser's toolbar in observer's machine.
+
+  Queue is filled by a robot (decbot) so it is pretty easy observing. However, there are several steps to do at the start of this program:
+
+David Schlegel should send you by email the “strategy files” for the night which are called pass1.json, pass2.json, and pass3.json. Copy them to someplace in observer2 (for example, to ~/vivas/DeySchlegel/ )  Do not change the name of those files. The copy in observer2 is important in case the operators need to load the scripts.
+David will also send a plan B script (in which exposure times are fixed). Use plan B only if decbot does not work. Decbot will dynamically adjust the exposure time depending on the conditions of the previous image. They pretty much prefer that way to go.
+Copy the pass*json files to the decbot directory. In a terminal:
+
+       	scp pass?.json declsp@observer2.ctio.noao.edu:~/obsbot/   (get password from Kathy or any of the contacts above)
+ 
+To start the bot:
+- SISPI: Setup SISPI with propID *2014B-0404*. Do not use their new propID (2023A-*) because decbot does not have permission to send exposure request to SISPI with other propIDs
+- Start a vncviewer (it is a special one, not the one we usually use). In another terminal:
+
+  	ssh -X -Y declsp@observer2.ctio.noao.edu 
+	cd
+	./bin/vnc
+	vncviewer :1   (same password we use for :7 or :3))
+
+        The above will open a vncviewer which will have 3 windows running. Do not close any. Some plots will be generated automatically once observing starts
+
+- When the time comes, start decbot. To do that, in a terminal (ssh -X -Y declsp@observer2.ctio.noao.edu, get password from Kathy/Alfredo) run:
+
+        cd ~/obsbot/
+        python2.7 -u decbot.py --exptime=80 | tee -a decbot-2023-11-08.log  (CHANGE THE DATE WITH THE START OF THE NIGHT DATE)
+
+	That will start feeding the queue with 2 exposures at the time
+	Click Go in the Observer Console. And that s it!
+
+- During the night check the pointing and make corrections if values get larger than ~20 arcsec. You can see the pointing in one of the plots generated automatically in the vncviewer :1  (but do not use those numbers since they have the wrong sign to what the operators need. Better do center in kentools)
+- Start/end the observing with Sun at -12
+- At the end of night: (on the initial terminal you opened in your machine, not in the VNC)
+
+	declsp@observer2% cd
+	declsp@observer2% bin/end_of_night_no_internet 2023-11-08 firstScienceImage
+	The end_of_night_no_internet script will close the vncviewer (do not close it yourself) and it will generate some summary plots. It takes some time. Be patient.
+	Copy the resulting figures, say for 2023-11-08, to your computer: 
+
+	scp declsp@observer2.ctio.noao.edu:~/observing/logs/2023-11-08\*.png .
+        scp declsp@observer2.ctio.noao.edu:~/observing/obstatus/decam-tiles_obstatus.fits .
+
+- *Upload those plots and file to the Google drive
+- Run the following commands (in declsp@observer2):
+
+      	bash
+	cd ~/obsbot
+	python2.7 copilot.py --fits=obs_decam.fits
+
+- Copy the resulting file to your computer and upload it to the same google drive. It is ok to replace a file with the same name already in the drive.
+
+       	scp declsp@observer2.ctio.noao.edu:~/obsbot/obs_decam.fits .
+
+- Delete the old pass files
+
+       rm  ~/obsbot/pass[1-3].json
+
+- Send an email with a summary of the night (any bad image? Anything in particular to report?) to the contact people above.
+
+
+NOTE: if decbot fails, just run script pass1.json (in folder 2023B-307896). This option should be just a plan B because decbot will adjust the exposure time with current conditions. The script has a fixed exposure time.
